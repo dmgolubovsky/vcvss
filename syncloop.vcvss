@@ -1,0 +1,391 @@
+{
+  "stripVersion": 1,
+  "rightModules": [
+    {
+      "id": 8572277545381318,
+      "plugin": "SubmarineFree",
+      "model": "TD-410",
+      "version": "2.0.4",
+      "params": [],
+      "leftModuleId": 1935392896545995,
+      "rightModuleId": 895644690070254,
+      "data": {
+        "width": 150.0,
+        "items": [
+          {
+            "text": "",
+            "color": "#29b2ef",
+            "position": 13.0,
+            "alignment": 2.0,
+            "fontSize": 20.0
+          },
+          {
+            "text": "Beat ->",
+            "color": "#29b2ef",
+            "position": 42.0,
+            "alignment": 4.0,
+            "fontSize": 20.0
+          },
+          {
+            "text": "",
+            "color": "#29b2ef",
+            "position": 53.0,
+            "alignment": 2.0,
+            "fontSize": 20.0
+          },
+          {
+            "text": "Rec On ->",
+            "color": "#29b2ef",
+            "position": 76.0,
+            "alignment": 4.0,
+            "fontSize": 20.0
+          },
+          {
+            "text": "Start ->",
+            "color": "#29b2ef",
+            "position": 114.0,
+            "alignment": 4.0,
+            "fontSize": 20.0
+          },
+          {
+            "text": "Input L ->",
+            "color": "#29b2ef",
+            "position": 147.0,
+            "alignment": 4.0,
+            "fontSize": 20.0
+          },
+          {
+            "text": "Input R ->",
+            "color": "#29b2ef",
+            "position": 180.0,
+            "alignment": 4.0,
+            "fontSize": 20.0
+          },
+          {
+            "text": "*Sync Loop*",
+            "color": "#29b2ef",
+            "position": 13.0,
+            "alignment": 2.0,
+            "fontSize": 20.0
+          }
+        ]
+      }
+    },
+    {
+      "id": 895644690070254,
+      "plugin": "LOGinstruments",
+      "model": "LessMess",
+      "version": "2.0.4",
+      "params": [],
+      "leftModuleId": 8572277545381318,
+      "rightModuleId": 5662953148881665,
+      "data": {
+        "label0": "",
+        "label1": "",
+        "label2": "",
+        "label3": "",
+        "label4": "",
+        "label5": "",
+        "label6": "",
+        "label7": "",
+        "label8": ""
+      }
+    },
+    {
+      "id": 5662953148881665,
+      "plugin": "ML_modules",
+      "model": "TrigBuf",
+      "version": "2.0.2",
+      "params": [
+        {
+          "value": 0.0,
+          "id": 0
+        },
+        {
+          "value": 0.0,
+          "id": 1
+        }
+      ],
+      "leftModuleId": 895644690070254,
+      "rightModuleId": 941862307518835,
+      "data": {
+        "armOnLoad": 0,
+        "armPoly": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": 941862307518835,
+      "plugin": "CountModula",
+      "model": "SingleSRFlipFlop",
+      "version": "2.4.0",
+      "params": [],
+      "leftModuleId": 5662953148881665,
+      "rightModuleId": 34545398580810,
+      "data": {
+        "moduleVersion": 1,
+        "QState": false,
+        "NQState": true,
+        "theme": 0
+      }
+    },
+    {
+      "id": 34545398580810,
+      "plugin": "SynthKit",
+      "model": "And",
+      "version": "2.0.1",
+      "params": [],
+      "leftModuleId": 941862307518835,
+      "rightModuleId": 6894806597508364
+    },
+    {
+      "id": 6894806597508364,
+      "plugin": "CountModula",
+      "model": "EventTimer",
+      "version": "2.4.0",
+      "params": [
+        {
+          "value": 0.0,
+          "id": 0
+        },
+        {
+          "value": 0.0,
+          "id": 1
+        },
+        {
+          "value": 0.0,
+          "id": 2
+        },
+        {
+          "value": 0.0,
+          "id": 3
+        },
+        {
+          "value": 0.0,
+          "id": 4
+        },
+        {
+          "value": 0.0,
+          "id": 5
+        },
+        {
+          "value": 0.0,
+          "id": 6
+        },
+        {
+          "value": 0.0,
+          "id": 7
+        }
+      ],
+      "leftModuleId": 34545398580810,
+      "rightModuleId": 8783483005811882,
+      "data": {
+        "moduleVersion": 1,
+        "length": 17,
+        "count": 0,
+        "running": false,
+        "clockState": false,
+        "retrigger": false,
+        "theme": 0
+      }
+    },
+    {
+      "id": 8783483005811882,
+      "plugin": "SynthKit",
+      "model": "Or",
+      "version": "2.0.1",
+      "params": [],
+      "leftModuleId": 6894806597508364,
+      "rightModuleId": 1307331810353383
+    },
+    {
+      "id": 1307331810353383,
+      "plugin": "LilacLoop",
+      "model": "Looper",
+      "version": "2.0.0",
+      "params": [
+        {
+          "value": 0.0,
+          "id": 0
+        },
+        {
+          "value": 0.0,
+          "id": 1
+        },
+        {
+          "value": 0.0,
+          "id": 2
+        },
+        {
+          "value": 0.0,
+          "id": 3
+        },
+        {
+          "value": 1.0,
+          "id": 4
+        },
+        {
+          "value": 0.0,
+          "id": 5
+        },
+        {
+          "value": 0.0,
+          "id": 6
+        },
+        {
+          "value": 0.0,
+          "id": 7
+        }
+      ],
+      "leftModuleId": 8783483005811882,
+      "data": {
+        "switchingOrder": 0,
+        "exportFileType": "wav",
+        "exportBitDepth": 16,
+        "exportPolyMode": "sum",
+        "autoSaveEnabled": false,
+        "autoSavePath": "",
+        "autoSaveLayout": [
+          1,
+          1
+        ]
+      }
+    }
+  ],
+  "rightWidth": 795.0,
+  "leftModules": [],
+  "leftWidth": 0.0,
+  "cables": [
+    {
+      "outputModuleId": 5662953148881665,
+      "outputId": 0,
+      "inputModuleId": 941862307518835,
+      "inputId": 0,
+      "color": "#f3374b"
+    },
+    {
+      "outputModuleId": 5662953148881665,
+      "outputId": 0,
+      "inputModuleId": 8783483005811882,
+      "inputId": 0,
+      "color": "#3695ef"
+    },
+    {
+      "outputModuleId": 34545398580810,
+      "outputId": 0,
+      "inputModuleId": 6894806597508364,
+      "inputId": 0,
+      "color": "#ffb437"
+    },
+    {
+      "outputModuleId": 34545398580810,
+      "outputId": 0,
+      "inputModuleId": 6894806597508364,
+      "inputId": 2,
+      "color": "#f3374b"
+    },
+    {
+      "outputModuleId": 895644690070254,
+      "outputId": 0,
+      "inputModuleId": 34545398580810,
+      "inputId": 0,
+      "color": "#ffb437"
+    },
+    {
+      "outputModuleId": 895644690070254,
+      "outputId": 1,
+      "inputModuleId": 5662953148881665,
+      "inputId": 0,
+      "color": "#8b4ade"
+    },
+    {
+      "outputModuleId": 895644690070254,
+      "outputId": 1,
+      "inputModuleId": 6894806597508364,
+      "inputId": 1,
+      "color": "#8b4ade"
+    },
+    {
+      "outputModuleId": 895644690070254,
+      "outputId": 2,
+      "inputModuleId": 5662953148881665,
+      "inputId": 2,
+      "color": "#f3374b"
+    },
+    {
+      "outputModuleId": 895644690070254,
+      "outputId": 3,
+      "inputModuleId": 1307331810353383,
+      "inputId": 3,
+      "color": "#00b56e"
+    },
+    {
+      "outputModuleId": 895644690070254,
+      "outputId": 4,
+      "inputModuleId": 1307331810353383,
+      "inputId": 4,
+      "color": "#3695ef"
+    },
+    {
+      "outputModuleId": 8783483005811882,
+      "outputId": 0,
+      "inputModuleId": 1307331810353383,
+      "inputId": 0,
+      "color": "#f3374b"
+    },
+    {
+      "outputModuleId": 6894806597508364,
+      "outputId": 1,
+      "inputModuleId": 941862307518835,
+      "inputId": 1,
+      "color": "#3695ef"
+    },
+    {
+      "outputModuleId": 6894806597508364,
+      "outputId": 1,
+      "inputModuleId": 8783483005811882,
+      "inputId": 1,
+      "color": "#8b4ade"
+    },
+    {
+      "outputModuleId": 941862307518835,
+      "outputId": 0,
+      "inputModuleId": 34545398580810,
+      "inputId": 1,
+      "color": "#00b56e"
+    }
+  ],
+  "version": "2.2.3"
+}
